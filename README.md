@@ -6,10 +6,14 @@ The collector is a place for users to share, trade, and store their collection i
 - display collection of user
 - like and favorite other games in collections
 - connect with other users to trade and share classic games
-## Tech Stack (client)
+## Tech Stack 
 - React 
 - Axios
 - React Router Dom
+- Nodejs
+- express
+- mongoose
+- dotenv
 
 ## Author :wave:
 Jonathan Cochran
