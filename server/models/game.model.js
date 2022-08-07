@@ -5,10 +5,13 @@ const GameSchema = new mongoose.Schema({
     required: [true, 'game title is required'],
     maxlength: [40, 'length max is 40 chars']
   },
+  boxArt: {
+    type: String
+  },
   rating: {
     type: String,
     required: [true, 'game rating is needed'],
-    enum: ['E', 'E10', 'T', 'M', 'AO' ]
+    enum: ['E', 'E10', 'T', 'M', 'AO','RP' ]
   },
   platform: {
     type: String,
