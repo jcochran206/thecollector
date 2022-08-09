@@ -1,12 +1,18 @@
 import './App.css';
+import { BrowserRouter,Routes,Route} from 'react-router-dom';
+import Header from '../src/components/Header/Header'
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-     <h1 className='text-3x1 font-bold underline'>
-      hello world!
-     </h1>
+      <Header/>
+      <Routes>
+      <Route path='/' element=""/>
+      <Route path='/new' element=""/>
+      </Routes>
     </div>
+    </BrowserRouter>
   );
 }
 
