@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter,Routes,Route} from 'react-router-dom';
-import Header from '../src/components/Header/Header'
+import Header from '../src/components/Header/Header';
+import GameList from '../src/components/GameList/GameList';
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
     <div className="App">
       <Header/>
       <Routes>
-      <Route path='/' element=""/>
+      <Route path='/' element={<GameList/>}/>
       <Route path='/new' element=""/>
       </Routes>
     </div>
