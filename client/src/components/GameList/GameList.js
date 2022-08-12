@@ -19,7 +19,7 @@ const GameList = () => {
             <div key={game._id} className="card">
                 <h2>{game.title}</h2>
                 <img src={game.boxArt} alt={game.title}/>
-                
+                <p>{game.description}</p>
                 <p>{game.edition}</p>
                 <p>{game.platform}</p>
             </div>
