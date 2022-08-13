@@ -31,7 +31,7 @@ const NewGame = () => {
         console.log(res.data);
         navigate('/');
     })
-    .catch((err) => setErrors(err.response.data.errors.message));
+    .catch((err) => console.log('error happend in submit', err));
   }
     
   return (
@@ -39,7 +39,6 @@ const NewGame = () => {
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <label>Title</label>
       <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
-      {errors.title && <span className="text-danger">{errors.title.message}</span>}
       <label>Box Art</label>
       <input type="text" value={boxArt} onChange={(e) => setBoxArt(e.target.value)} />
       <label>Description:</label>
@@ -79,7 +78,7 @@ const NewGame = () => {
       <input
         type="text"
         value={manufacturer}
-        onChange={(e) => setManufacturer(e.target.checked)}
+        onChange={(e) => setManufacturer(e.target.value)}
       />
       <label> Release Year</label>
       <input type="number" value={releaseYear} onChange={(e) => setReleaseYear(e.target.value)} />

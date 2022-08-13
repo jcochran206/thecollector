@@ -4,6 +4,7 @@ import axios from 'axios';
 
 const Game = () => {
     const [game, setGame] = useState({});
+    const [count, setCount] = useState('');
     const {id} = useParams();
     const navigate = useNavigate();
 
@@ -16,6 +17,19 @@ const Game = () => {
         .catch((err) => console.log("issue in get single game by id",err))
     }, [id])
 
+    const deleteGame = (gameId) => {
+      axios.delete(`http://localhost:8000/api/games/${id}`)
+      .then((res) => {
+        navigate('/')
+      })
+      .catch((err) => console.log('get game by id error', err))
+    };
+
+    const counter = () => {
+      setCount((count) => count + 1)
+      console.log('button clicked', count)
+    }
+
   return (
     <div>
         <h2>{game.title}</h2>
@@ -23,6 +37,8 @@ const Game = () => {
         <p>{game.description}</p>
         <p>{game.edition}</p>
         <p>{game.platform}</p>
+        <button onClick={deleteGame}>Delete Game</button>
+        <button onClick={(e) => counter(e)}>Like {count}</button>
     </div>
   )
 }
