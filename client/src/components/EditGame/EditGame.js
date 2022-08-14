@@ -1,8 +1,8 @@
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import React, {useState} from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
-const NewGame = () => {
+const EditGame = () => {
   const [title, setTitle] = useState('');
   const [boxArt, setBoxArt] = useState('');
   const [rating, setRating] = useState('');
@@ -13,11 +13,29 @@ const NewGame = () => {
   const [manufacturer, setManufacturer] = useState('');
   const [releaseYear, setReleaseYear] = useState(0);
   const navigate = useNavigate();
-  const [errors, setErrors] = useState({});
-  //handle submit
+  const {id} = useParams();
+  //fetch call 
+  useEffect(() => {
+    axios.get(`http://localhost:8000/api/games/${id}`)
+    .then((res)=> {
+        console.log(res.data);
+        setTitle(res.data.title);
+        setBoxArt(res.data.boxArt);
+        setRating(res.data.rating);
+        setDescription(res.data.description)
+        setPlatform(res.data.platform);
+        setEdition(res.data.edition);
+        setPrice(res.data.price);
+        setManufacturer(res.data.manufacturer);
+        setReleaseYear(res.data.releaseYear);
+    })
+    .catch((err) => console.log('get game by id error', err))
+  }, [])
+
+  //handle submit 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:8000/api/games', {
+    axios.put(`http://localhost:8000/api/games/${id}`, {
         title,
         boxArt,
         description,
@@ -26,17 +44,15 @@ const NewGame = () => {
         price,
         manufacturer,
         releaseYear,
-    })
-    .then((res) => {
+    }).then((res) => {
         console.log(res.data);
         navigate('/');
-    })
-    .catch((err) => console.log('error happend in submit', err));
+    }).catch((err) => console.log('post error', err))
   }
-    
+
   return (
     <div>
-      <h2>Add New Game</h2>
+              <h2>Add New Game</h2>
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <label>Title</label>
       <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
@@ -87,9 +103,8 @@ const NewGame = () => {
       <button>Add Game</button>
 
     </form>
-        
     </div>
   )
 }
 
-export default NewGame
+export default EditGame

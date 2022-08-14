@@ -29,8 +29,7 @@ module.exports.createOneGame = (req, res) => {
     Game.create(req.body)
     .then((newGame) =>{
         res.status(201).json(newGame)
-    })
-    .catch((err) => {
+    }).catch((err) => {
         res.json({message: 'error in create function', err});
         res.status(400).json({message: 'something is wrong in the create function', error: err});
     })
@@ -41,8 +40,7 @@ module.exports.updateAGame = (req, res) => {
     Game.findOneAndUpdate({_id: req.params.id}, req.body, {new: true, runValidators: true})
     .then((game) => {
         res.json(game);
-    })
-    .catch((err) => {
+    }).catch((err) => {
         res.json({message: 'error in update function', err});
         res.status(400).json({message: 'something is wrong in the update function', error: err});
     })
