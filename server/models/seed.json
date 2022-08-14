@@ -2,8 +2,9 @@
     {
         "title": "Mid Night Suns",
         "boxArt": "https://m.media-amazon.com/images/I/814yWno4WEL._AC_SX522_.jpg",
+        "description": "Set in the darker side of the Marvel Universe, Marvel's Midnight Suns is a tactical RPG that sees you fighting alongside and forging friendships with iconic Marvel heroes",
         "rating": "T",
-        "platform": "PS%",
+        "platform": "PS5",
         "edition": "Standard",
         "price": 60,
         "manufacturer": "2K",
@@ -13,6 +14,7 @@
     {
         "title": "Modern Warfare 2",
         "boxArt": "https://m.media-amazon.com/images/I/81Fi514Q0QL._SX385_.jpg",
+        "description":"Activision has unveiled a new multiplayer map for Call of Duty: Modern Warfare II and fans may get to play it before too long in the upcoming beta",
         "rating": "RP",
         "platform": "PS5",
         "edition": "Standard",
@@ -21,8 +23,9 @@
         "releaseYear": 2022
     },
     {
-        "title": "Forsaken",
+        "title": "Forspoken",
         "boxArt": "https://m.media-amazon.com/images/I/81zbGpJH11L._SX385_.jpg",
+        "description" : "Forspoken follows the journey of Frey, a young New Yorker transported to the beautiful and cruel land of Athia.",
         "rating": "M",
         "platform": "PS5",
         "edition": "Standard",

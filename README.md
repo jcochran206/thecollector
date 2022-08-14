@@ -21,6 +21,7 @@ The collector is a place for users to share, trade, and store their collection i
 - React Router Dom
 - Axios
 - Mongoose
+- Tailwind CSS
 
 ## Author :wave:
 Jonathan Cochran

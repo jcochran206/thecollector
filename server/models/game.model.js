@@ -7,6 +7,9 @@ const GameSchema = new mongoose.Schema({
   },
   boxArt: {
     type: String
+  }, 
+  description: {
+    type: String
   },
   rating: {
     type: String,
