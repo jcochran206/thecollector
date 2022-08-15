@@ -8,4 +8,6 @@ const uri = `mongodb+srv://${username}:${password}@mernprojects.blegnam.mongodb.
 mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
-}).then(() => console.log('Established a connection to the database')).catch(err => console.log('Something went wrong when connecting to the database ', err));
+})
+.then(()=> console.log('established connection to mongodb'))
+.catch((err) => console.log('error in connection', err))
