@@ -32,7 +32,7 @@ module.exports.createOneGame = (req, res) => {
     })
     .catch((err) => {
         res.json({message: 'error in create function', err});
-        res.status(400).json({message: 'something is wrong in the create function', error: err});
+        res.status(400).json({message: 'something is wrong in the create function', errors: err.errors});
     })
 }
 

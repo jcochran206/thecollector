@@ -13,7 +13,6 @@ const NewGame = () => {
   const [manufacturer, setManufacturer] = useState('');
   const [releaseYear, setReleaseYear] = useState(0);
   const navigate = useNavigate();
-  const [errors, setErrors] = useState({});
   //handle submit
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -35,15 +34,26 @@ const NewGame = () => {
   }
     
   return (
-    <div>
+    <div className='w-full max-w-lg'>
       <h2>Add New Game</h2>
-      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <label>Title</label>
-      <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
+      <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-4 pb-4 mb-4 flex flex-col items-center justify-center">
+      <div className='mb-1'>
+        <label className='block text-gray-700 text-lg font-bold mb-2" for="username"'>Title</label>
+        <input className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+        type="text" 
+        value={title} 
+        onChange={(e) => setTitle(e.target.value)} />
+      </div>
       <label>Box Art</label>
-      <input type="text" value={boxArt} onChange={(e) => setBoxArt(e.target.value)} />
+      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+      type="text" 
+      value={boxArt} 
+      onChange={(e) => setBoxArt(e.target.value)} />
       <label>Description:</label>
-      <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
+      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+      type="text" 
+      value={description} 
+      onChange={(e) => setDescription(e.target.value)} />
       <label>Rating</label>
       <select value={rating} name="rating" onChange={(e) => setRating(e.target.value)}>
         <option>Select a Rating</option>
@@ -55,37 +65,37 @@ const NewGame = () => {
         <option value="RP">Rating Pending</option>
       </select>
       <label>platform:</label>
-      <input
+      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         type="text"
         value={platform}
         placeholder="enter price"
         onChange={(e) => setPlatform(e.target.value)}
       />
       <label>edition:</label>
-      <input
+      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         type="text"
         value={edition}
         placeholder="enter price"
         onChange={(e) => setEdition(e.target.value)}
       />
       <label>Price:</label>
-      <input
+      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         type="text"
         value={price}
         placeholder="enter price"
         onChange={(e) => setPrice(e.target.value)}
       />
       <label>Manufacturer:</label>
-      <input
+      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         type="text"
         value={manufacturer}
         onChange={(e) => setManufacturer(e.target.value)}
       />
       <label> Release Year</label>
-      <input type="number" value={releaseYear} onChange={(e) => setReleaseYear(e.target.value)} />
-
-      <button>Add Game</button>
-
+      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="number" value={releaseYear} onChange={(e) => setReleaseYear(e.target.value)} />
+      <div className='py-2 mb-4'>
+      <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline;' type='submit'>Add Game</button>
+      </div>
     </form>
         
     </div>

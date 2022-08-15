@@ -12,10 +12,10 @@ const Header = () => {
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
           <NavLink
-            className="text-sm font-bold leading-relaxed flex mr-4 py-3 whitespace-nowrap uppercase text-white"
+            className="text-xl font-bold leading-relaxed flex mr-4 py-3 whitespace-nowrap uppercase text-white"
             to="/"
           >
-            Collectors <GiConsoleController/> Games
+            Collector Games <span className='px-4 py-1'><GiConsoleController /></span>
           </NavLink>
           <button
             className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -38,9 +38,6 @@ const Header = () => {
             </NavLink>
             <NavLink className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" to='/games/new'>
                 Add New Game
-            </NavLink>
-            <NavLink className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" to='/games/edit'> 
-                Edit Game
             </NavLink>
           </ul>
         </div>
