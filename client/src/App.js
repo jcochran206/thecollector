@@ -4,6 +4,7 @@ import Header from '../src/components/Header/Header';
 import GameList from '../src/components/GameList/GameList';
 import Game from'../src/components/Game/Game';
 import NewGame from './components/NewGame/NewGame';
+import EditGame from './components/EditGame/EditGame';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path='/' element={<GameList/>}/>
       <Route path='/games/new' element={<NewGame />}/>
       <Route path='/games/:id' element={<Game />} />
+      <Route path='/games/edit' element={<EditGame />} />
       </Routes>
     </div>
     </BrowserRouter>

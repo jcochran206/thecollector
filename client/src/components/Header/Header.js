@@ -39,6 +39,9 @@ const Header = () => {
             <NavLink className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" to='/games/new'>
                 Add New Game
             </NavLink>
+            <NavLink className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" to='/games/edit'> 
+                Edit Game
+            </NavLink>
           </ul>
         </div>
       </div>

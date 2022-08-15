@@ -31,14 +31,20 @@ const Game = () => {
     }
 
   return (
-    <div>
-        <h2>{game.title}</h2>
-        <img src={game.boxArt} alt={game.title}/>
-        <p>{game.description}</p>
-        <p>{game.edition}</p>
-        <p>{game.platform}</p>
-        <button onClick={deleteGame}>Delete Game</button>
-        <button onClick={(e) => counter(e)}>Like {count}</button>
+    <div className='container mx-auto px-4'>
+      <div className='max-w-sm rounded shadow-sm bg-center'>
+        <img className='w-full' src={game.boxArt} alt={game.title}/>
+        <div className='px-6 py-4'>
+        <h2 className='font-bold text-xl mb-2'>{game.title}</h2>
+        <p className='text-gray-700 text-base'>{game.description}</p>
+        </div>
+        <p className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'>{game.edition}</p>
+        <p className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'>{game.platform}</p>
+        <div className='flex flex-row justify-evenly'>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={deleteGame}>Delete Game</button>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={(e) => counter(e)}>Like {count}</button>
+        </div>
+      </div>  
     </div>
   )
 }
