@@ -11,7 +11,7 @@ const NewGame = () => {
   const [edition, setEdition] = useState('');
   const [price, setPrice] = useState('');
   const [manufacturer, setManufacturer] = useState('');
-  const [releaseYear, setReleaseYear] = useState(0);
+  const [releaseYear, setReleaseYear] = useState('');
   const navigate = useNavigate();
   //handle submit
   const handleSubmit = (e) => {
@@ -20,6 +20,7 @@ const NewGame = () => {
         title,
         boxArt,
         description,
+        platform,
         rating,
         edition,
         price,
@@ -68,14 +69,14 @@ const NewGame = () => {
       <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         type="text"
         value={platform}
-        placeholder="enter price"
+        placeholder="enter platform"
         onChange={(e) => setPlatform(e.target.value)}
       />
       <label>edition:</label>
       <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         type="text"
         value={edition}
-        placeholder="enter price"
+        placeholder="enter edition"
         onChange={(e) => setEdition(e.target.value)}
       />
       <label>Price:</label>

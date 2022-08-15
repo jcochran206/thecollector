@@ -50,6 +50,7 @@ const EditGame = () => {
         title,
         boxArt,
         description,
+        platform,
         rating,
         edition,
         price,
