@@ -7,6 +7,6 @@ const cors = require('cors');
 app.use(express.json());
 app.use(cors());
 
-require('../server/routes/game.routes')(app);
+require('./routes/game.routes')(app);
 
 app.listen(PORT, () => console.log(`Server is up on ${PORT}`));

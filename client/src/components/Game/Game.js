@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const Game = () => {
     const [game, setGame] = useState({});
-    const [count, setCount] = useState('');
+    const [count, setCount] = useState(Number);
     const {id} = useParams();
     const navigate = useNavigate();
 
@@ -26,7 +26,7 @@ const Game = () => {
     };
 
     const counter = () => {
-      setCount((count) => count + 1)
+      setCount((count) => count = count + 1)
       console.log('button clicked', count)
     }
 

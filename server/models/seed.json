@@ -32,5 +32,16 @@
         "price": 70,
         "manufacturer": "Square enix",
         "releaseYear": 2022
+    },
+    {
+        "title": "Guardians of the Galaxy",
+        "boxArt": "https://media.gamestop.com/i/gamestop/11149082/Marvels-Guardians-of-the-Galaxy----PlayStation-5",
+        "description" : "Forspoken follows the journey of Frey, a young New Yorker transported to the beautiful and cruel land of Athia.",
+        "rating": "M",
+        "platform": "PS5",
+        "edition": "Standard",
+        "price": 70,
+        "manufacturer": "Square enix",
+        "releaseYear": 2022
     }
 ]

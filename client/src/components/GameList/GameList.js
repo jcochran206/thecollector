@@ -16,13 +16,6 @@ const GameList = () => {
         .catch((err)=>console.log(err))
     }, []);
 
-    const deleteGame = (gameId) => {
-        axios.delete(`http://localhost:8000/api/games/${id}`)
-        .then((res) => {
-          navigate('/')
-        })
-        .catch((err) => console.log('get game by id error', err))
-    };
 
   return (
     <div className='bg-white'>
@@ -41,9 +34,6 @@ const GameList = () => {
                             <p className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'>{game.platform}</p>
                         </div>
                         <div className='flex flex-row justify-evenly'>
-                            <button id={game._id}
-                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" 
-                            onClick={deleteGame}>Delete Game</button>
                             <Link className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' 
                             to={`/games/edit/${game._id}`}> Edit Game </Link>
                             <Link className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' 

@@ -27,13 +27,13 @@ module.exports.findOneGame = (req, res) => {
 //create
 module.exports.createOneGame = (req, res) => {
     Game.create(req.body)
-    .then((newGame) =>{
-        res.status(201).json(newGame)
-    })
-    .catch((err) => {
-        res.json({message: 'error in create function', err});
-        res.status(400).json({message: 'something is wrong in the create function', errors: err.errors});
-    })
+        .then((newGame) =>{
+            return res.status(201).json(newGame)
+        })
+        .catch((err) => {
+            res.json({message: 'error in create function', err});
+            res.status(400).json({message: 'something is wrong in the create function', errors: err.errors});
+        })
 }
 
 //update
@@ -52,7 +52,8 @@ module.exports.updateAGame = (req, res) => {
 module.exports.deleteOneGame = (req, res) => {
     Game.deleteOne({_id: req.params.id})
     .then((game) => {
-        res.json(game)
+        return res.json(game)
+        res.redirect('/api/games')
     })
     .catch((err) => {
         res.json({message: 'error in delete function', err});
