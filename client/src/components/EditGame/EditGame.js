@@ -72,6 +72,9 @@ const EditGame = () => {
         type="text" 
         value={title} 
         onChange={(e) => setTitle(e.target.value)} />
+        {title.length > 0 && title.length < 5 ? (
+        <p style={{ color: 'red' }}>Product title must be more than 5 characters</p>
+      ) : null}
       </div>
       <label>Box Art</label>
       <input className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
@@ -82,6 +85,9 @@ const EditGame = () => {
       type="text" 
       value={description} 
       onChange={(e) => setDescription(e.target.value)} />
+      {description.length > 0 && description.length < 5 ? (
+        <p style={{ color: 'red' }}>Product description must be more than 3 characters</p>
+      ) : null}
       <label>Rating</label>
       <select className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
       value={rating} 
