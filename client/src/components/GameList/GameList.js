@@ -21,7 +21,7 @@ const GameList = () => {
     <div className='bg-white'>
         <div className='max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8'> 
         {/* jumbtron */}
-        <div className="max-w-screen-xl bg-blue-500 shadow-2xl rounded-lg mx-auto text-center py-12 mt-4">
+        <div className="max-w-screen-xl bg-green-500 shadow-2xl rounded-lg mx-auto text-center py-12 mt-4">
         <h2 className="text-3xl leading-9 font-bold tracking-tight text-white sm:text-4xl sm:leading-10">
             Start Gaming with Us
         </h2>
