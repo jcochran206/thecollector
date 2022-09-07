@@ -21,7 +21,7 @@ const EditGame = () => {
   //fetch call 
   useEffect(() => {
     if(!state){
-      axios.get(`http://localhost:8000/api/games/${id}`)
+      axios.get(`https://thecollector-server.herokuapp.com/api/games/${id}`)
     .then((res)=> {
         console.log(res.data);
         setGame(res.data.game);

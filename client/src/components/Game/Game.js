@@ -9,7 +9,7 @@ const Game = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/games/${id}`)
+        axios.get(`https://thecollector-server.herokuapp.com/api/games/${id}`)
         .then((res)=> {
             console.log(res.data);
             setGame(res.data.game);
@@ -18,7 +18,7 @@ const Game = () => {
     }, [id])
 
     const deleteGame = (gameId) => {
-      axios.delete(`http://localhost:8000/api/games/${id}`)
+      axios.delete(`https://thecollector-server.herokuapp.com/api/games/${id}`)
       .then((res) => {
         navigate('/')
       })

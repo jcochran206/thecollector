@@ -16,7 +16,7 @@ const NewGame = () => {
   //handle submit
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:8000/api/games', {
+    axios.post('https://thecollector-server.herokuapp.com/api/games', {
         title,
         boxArt,
         description,
