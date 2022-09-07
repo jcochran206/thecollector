@@ -3,7 +3,7 @@ require('dotenv').config();
 
 // const username = process.env.MONGO_USER;
 // const password = process.env.MONGO_PASS;
-const uri = process.env.MONGODB_URI;
+const uri = process.env.MONGO_URI;
 mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true

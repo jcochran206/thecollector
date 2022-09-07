@@ -8,7 +8,7 @@ const GameList = () => {
     const {id} = useParams();
     const navigate = useNavigate();
     useEffect(() => {
-        axios.get('http://localhost:8000/api/games')
+        axios.get('https://thecollector-server.herokuapp.com/api/games') //change to localhost:8000 when in dev
         .then((res) => {
             console.log(res.data);
             setGames(res.data.games);
